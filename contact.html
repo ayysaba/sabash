@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ka">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
     <!-- საიტის მთავარი ჰედერი და ნავიგაცია -->
@@ -18,13 +20,15 @@
                 <h1><a href="index.html" class="brand-link">საბა მჭედლიშვილი</a></h1>
                 <p class="subtitle"><strong>დამწყები ვებ-დეველოპერი (16 წლის) | Frontend ენთუზიასტი</strong></p>
             </div>
-            
+
             <!-- ჰედერის მართვის ღილაკები: თემის გადამრთველი და ბურგერ მენიუ -->
             <div class="header-controls">
                 <!-- Light / Dark თემის გადასართველი ღილაკი -->
-                <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="თემის შეცვლა (Light / Dark)" title="თემის შეცვლა">
+                <button id="theme-toggle" class="theme-toggle-btn" type="button"
+                    aria-label="თემის შეცვლა (Light / Dark)" title="თემის შეცვლა">
                     <span class="theme-icon sun-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="5"></circle>
                             <line x1="12" y1="1" x2="12" y2="3"></line>
                             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -37,14 +41,16 @@
                         </svg>
                     </span>
                     <span class="theme-icon moon-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                         </svg>
                     </span>
                 </button>
 
                 <!-- ბურგერ მენიუს ღილაკი (მობილურის რეზოლუციაზე) -->
-                <button class="burger-btn" id="burger-btn" type="button" aria-label="ნავიგაციის მენიუს გახსნა" aria-expanded="false" aria-controls="main-nav">
+                <button class="burger-btn" id="burger-btn" type="button" aria-label="ნავიგაციის მენიუს გახსნა"
+                    aria-expanded="false" aria-controls="main-nav">
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -59,6 +65,7 @@
                 <li><a href="skills.html">უნარები</a></li>
                 <li><a href="projects.html">პროექტები</a></li>
                 <li><a href="goals.html">სასწავლო მიზნები</a></li>
+                <li><a href="users.html">მომხმარებლები</a></li>
                 <li><a href="contact.html" class="active" aria-current="page">კონტაქტი</a></li>
             </ul>
         </nav>
@@ -72,7 +79,8 @@
 
             <address>
                 <ul class="contact-info">
-                    <li><strong>ელ. ფოსტა:</strong> <a href="mailto:saba.mchedlishvili@example.com">saba.mchedlishvili@example.com</a></li>
+                    <li><strong>ელ. ფოსტა:</strong> <a
+                            href="mailto:saba.mchedlishvili@example.com">saba.mchedlishvili@example.com</a></li>
                     <li><strong>მდებარეობა:</strong> საქართველო</li>
                 </ul>
             </address>
@@ -80,7 +88,7 @@
             <form action="#" method="post">
                 <fieldset>
                     <legend><strong>საკონტაქტო ფორმა</strong></legend>
-                    
+
                     <p>
                         <label for="full-name">თქვენი სახელი: <abbr title="სავალდებულო">*</abbr></label><br>
                         <input type="text" id="full-name" name="name" placeholder="მაგ: გიორგი" required>
@@ -102,7 +110,8 @@
 
                     <p>
                         <label for="message">შეტყობინება: <abbr title="სავალდებულო">*</abbr></label><br>
-                        <textarea id="message" name="message" rows="5" cols="40" placeholder="დაწერეთ თქვენი შეტყობინება..." required></textarea>
+                        <textarea id="message" name="message" rows="5" cols="40"
+                            placeholder="დაწერეთ თქვენი შეტყობინება..." required></textarea>
                     </p>
 
                     <div class="form-actions">
@@ -121,4 +130,5 @@
     </footer>
 
 </body>
+
 </html>
