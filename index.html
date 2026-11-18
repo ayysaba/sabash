@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ka">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +51,8 @@
         }
 
         /* Dark Theme */
-        [data-theme="dark"], body.dark-theme {
+        [data-theme="dark"],
+        body.dark-theme {
             --bg-color: #171412;
             --card-bg: #231f1c;
             --card-border: #38312b;
@@ -85,7 +87,9 @@
         /* 
           1. გლობალური პარამეტრები და Box-Sizing:
         */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
         }
 
@@ -110,7 +114,9 @@
         /* 
           3. კონტეინერები (Header, Main, Footer):
         */
-        header, main, footer {
+        header,
+        main,
+        footer {
             width: 90%;
             max-width: 860px;
             margin: 0 auto;
@@ -248,6 +254,7 @@
         .sun-icon {
             display: none;
         }
+
         .moon-icon {
             display: inline-flex;
         }
@@ -298,9 +305,9 @@
             height: 3px;
             background-color: var(--text-primary);
             border-radius: 3px;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                        opacity 0.2s ease, 
-                        background-color 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.2s ease,
+                background-color 0.3s ease;
             transform-origin: center;
         }
 
@@ -350,7 +357,8 @@
             cursor: pointer;
         }
 
-        nav a:hover, nav a:focus-visible {
+        nav a:hover,
+        nav a:focus-visible {
             background-color: var(--accent-color);
             color: var(--btn-text);
             border-color: var(--accent-color);
@@ -541,7 +549,8 @@
             transition: color 0.3s ease;
         }
 
-        th, td {
+        th,
+        td {
             padding: 12px 14px;
             text-align: left;
             border-bottom: 1px solid var(--table-border);
@@ -603,7 +612,9 @@
             transition: color 0.3s ease;
         }
 
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             width: 100%;
             box-sizing: border-box;
             padding: 10px 12px;
@@ -617,7 +628,9 @@
             transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s ease, color 0.3s ease;
         }
 
-        input:focus, select:focus, textarea:focus {
+        input:focus,
+        select:focus,
+        textarea:focus {
             outline: none;
             border-color: var(--accent-color);
             box-shadow: 0 0 0 3px var(--input-focus-shadow);
@@ -693,7 +706,9 @@
                 padding: 12px 0;
             }
 
-            header, main, footer {
+            header,
+            main,
+            footer {
                 width: 94%;
             }
 
@@ -784,7 +799,9 @@
                 padding: 8px 0;
             }
 
-            header, main, footer {
+            header,
+            main,
+            footer {
                 width: 95%;
             }
 
@@ -853,6 +870,7 @@
                 opacity: 0;
                 transform: translateY(-8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1015,7 +1033,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .employees-grid {
@@ -1146,6 +1166,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
     <!-- საიტის მთავარი ჰედერი და ნავიგაცია -->
@@ -1155,13 +1176,15 @@
                 <h1><a href="index.html" class="brand-link">საბა მჭედლიშვილი</a></h1>
                 <p class="subtitle"><strong>დამწყები ვებ-დეველოპერი (16 წლის) | Frontend ენთუზიასტი</strong></p>
             </div>
-            
+
             <!-- ჰედერის მართვის ღილაკები: თემის გადამრთველი და ბურგერ მენიუ -->
             <div class="header-controls">
                 <!-- Light / Dark თემის გადასართველი ღილაკი -->
-                <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="თემის შეცვლა (Light / Dark)" title="თემის შეცვლა">
+                <button id="theme-toggle" class="theme-toggle-btn" type="button"
+                    aria-label="თემის შეცვლა (Light / Dark)" title="თემის შეცვლა">
                     <span class="theme-icon sun-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="5"></circle>
                             <line x1="12" y1="1" x2="12" y2="3"></line>
                             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -1174,14 +1197,16 @@
                         </svg>
                     </span>
                     <span class="theme-icon moon-icon" aria-hidden="true">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                         </svg>
                     </span>
                 </button>
 
                 <!-- ბურგერ მენიუს ღილაკი (მობილურის რეზოლუციაზე) -->
-                <button class="burger-btn" id="burger-btn" type="button" aria-label="ნავიგაციის მენიუს გახსნა" aria-expanded="false" aria-controls="main-nav">
+                <button class="burger-btn" id="burger-btn" type="button" aria-label="ნავიგაციის მენიუს გახსნა"
+                    aria-expanded="false" aria-controls="main-nav">
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -1212,19 +1237,16 @@
         <section id="about">
             <h2>ჩემ შესახებ</h2>
             <figure>
-                <img 
-                    src="nle-choppa.jpg" 
-                    alt="NLE Choppa - Top Shotta" 
-                    width="200" 
-                    height="200"
+                <img src="nle-choppa.jpg" alt="NLE Choppa - Top Shotta" width="200" height="200"
                     style="object-fit: cover;"
-                    onerror="this.onerror=null; this.src='https://i.scdn.co/image/ab67616d0000b27365bc1bfbb95ff5264f788839';"
-                >
+                    onerror="this.onerror=null; this.src='https://i.scdn.co/image/ab67616d0000b27365bc1bfbb95ff5264f788839';">
                 <figcaption>NLE Choppa - Top Shotta</figcaption>
             </figure>
             <p>
-                გამარჯობა! მე ვარ საბა მჭედლიშვილი, 16 წლის. ახლახან დავიწყე პროგრამირების შესწავლა და ძალიან მაინტერესებს ვებ-ტექნოლოგიები. 
-                ამ ეტაპზე აქტიურად ვსწავლობ <strong>HTML5-ს</strong>, <strong>CSS3-სა</strong> და <strong>JavaScript-ის</strong> საფუძვლებს.
+                გამარჯობა! მე ვარ საბა მჭედლიშვილი, 16 წლის. ახლახან დავიწყე პროგრამირების შესწავლა და ძალიან
+                მაინტერესებს ვებ-ტექნოლოგიები.
+                ამ ეტაპზე აქტიურად ვსწავლობ <strong>HTML5-ს</strong>, <strong>CSS3-სა</strong> და
+                <strong>JavaScript-ის</strong> საფუძვლებს.
             </p>
             <p>
                 ჩემი მიზანია შევქმნა სუფთა, სემანტიკური და მომხმარებლისთვის მოსახერხებელი ვებ-გვერდები.
@@ -1251,7 +1273,8 @@
                 <li>
                     <span class="skill-title"><strong>CSS3</strong> - სტილები და დიზაინი</span>
                     <progress value="70" max="100">70%</progress>
-                    <span class="skill-desc">Flexbox, Grid, მედია მოთხოვნები (Media Queries) და რესფონსიული განლაგება.</span>
+                    <span class="skill-desc">Flexbox, Grid, მედია მოთხოვნები (Media Queries) და რესფონსიული
+                        განლაგება.</span>
                 </li>
                 <li>
                     <span class="skill-title"><strong>JavaScript</strong> - საბაზისო ინტერაქციები</span>
@@ -1268,7 +1291,8 @@
             <details>
                 <summary>დამატებითი დეტალები სასწავლო პროგრამის შესახებ</summary>
                 <ul>
-                    <li>Semantic Tags: &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;</li>
+                    <li>Semantic Tags: &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;,
+                        &lt;footer&gt;</li>
                     <li>CSS Variables, Flexbox, Media Queries (Mobile First & Desktop)</li>
                     <li>ფორმის ვალიდაციები და ტიპები</li>
                 </ul>
@@ -1283,14 +1307,15 @@
         <!-- 3. პროექტების სექცია -->
         <section id="projects">
             <h2>ჩემი პროექტები</h2>
-            
+
             <article>
                 <header>
                     <h3>პროექტი 1: პირადი სავიზიტო გვერდი</h3>
                     <p><small>ტექნოლოგიები: HTML5, CSS3</small></p>
                 </header>
                 <p>
-                    ჩემი პირველი საგანმანათლებლო პროექტი, სადაც შევქმენი მარტივი და სუფთა სტრუქტურის მქონე სავიზიტო ბარათი.
+                    ჩემი პირველი საგანმანათლებლო პროექტი, სადაც შევქმენი მარტივი და სუფთა სტრუქტურის მქონე სავიზიტო
+                    ბარათი.
                 </p>
                 <footer>
                     <p>სტატუსი: <strong>დასრულებული</strong></p>
@@ -1303,7 +1328,8 @@
                     <p><small>ტექნოლოგიები: HTML5, CSS3 (Variables, Flexbox), JavaScript</small></p>
                 </header>
                 <p>
-                    პორტფოლიო, რომელიც სრულად მორგებულია მობილურ ეკრანებზე: გააჩნია ფუნქციური JavaScript ბურგერ მენიუ და Light/Dark თემის გადამრთველი.
+                    პორტფოლიო, რომელიც სრულად მორგებულია მობილურ ეკრანებზე: გააჩნია ფუნქციური JavaScript ბურგერ მენიუ და
+                    Light/Dark თემის გადამრთველი.
                 </p>
                 <footer>
                     <p>სტატუსი: <strong>მიმდინარე</strong></p>
@@ -1320,21 +1346,25 @@
         <section id="employees">
             <h2>ჩვენი გუნდი / თანამშრომლები</h2>
             <p>
-                თანამშრომელთა სია დინამიკურად იტვირთება <strong>JSONPlaceholder API</strong>-დან (HTTP <code>GET</code> მეთოდით).
+                თანამშრომელთა სია დინამიკურად იტვირთება <strong>JSONPlaceholder API</strong>-დან (HTTP <code>GET</code>
+                მეთოდით).
                 ასევე ინტეგრირებულია ახლის დამატება (<code>POST</code>) და წაშლა (<code>DELETE</code>).
             </p>
 
             <!-- საძიებო ველი და დამატების ღილაკი -->
             <div class="employees-controls">
-                <input type="text" id="employee-search" placeholder="მოძებნეთ თანამშრომელი სახელით, მეილით ან კომპანიით..." aria-label="თანამშრომლის ძებნა">
-                <button type="button" id="btn-toggle-add-form" class="btn-primary-action">+ თანამშრომლის დამატება (POST)</button>
+                <input type="text" id="employee-search"
+                    placeholder="მოძებნეთ თანამშრომელი სახელით, მეილით ან კომპანიით..." aria-label="თანამშრომლის ძებნა">
+                <button type="button" id="btn-toggle-add-form" class="btn-primary-action">+ თანამშრომლის დამატება
+                    (POST)</button>
             </div>
 
             <!-- ახალი თანამშრომლის დამატების ფორმა (HTTP POST) -->
             <form id="add-employee-form" class="add-employee-card" style="display: none;">
                 <h3>ახალი თანამშრომლის დამატება (POST მეთოდი)</h3>
-                <p><small>ფორმა აგზავნის <code>POST</code> მოთხოვნას სერვერზე და ამატებს თანამშრომელს სიის თავში:</small></p>
-                
+                <p><small>ფორმა აგზავნის <code>POST</code> მოთხოვნას სერვერზე და ამატებს თანამშრომელს სიის
+                        თავში:</small></p>
+
                 <div class="form-grid">
                     <p>
                         <label for="emp-name">სახელი და გვარი: *</label>
@@ -1382,7 +1412,7 @@
         <!-- 5. სასწავლო მიზნების ცხრილი -->
         <section id="goals">
             <h2>სასწავლო მიზნები და გეგმა</h2>
-            
+
             <div class="table-container">
                 <table>
                     <caption><strong>2026 წლის სასწავლო გეგმა და ვადები</strong></caption>
@@ -1435,15 +1465,17 @@
             <p>თუ გაქვთ რაიმე შეკითხვა, იდეა ან შემოთავაზება, სიამოვნებით მოგისმენთ:</p>
 
             <ul class="contact-info">
-                <li><strong>ელ-ფოსტა:</strong> <a href="mailto:saba.mchedlishvili@example.com">saba.mchedlishvili@example.com</a></li>
+                <li><strong>ელ-ფოსტა:</strong> <a
+                        href="mailto:saba.mchedlishvili@example.com">saba.mchedlishvili@example.com</a></li>
                 <li><strong>ტელეფონი:</strong> <a href="tel:+995599690991">+995 599 69 09 91</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com/sabamchedlishvili</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com" target="_blank"
+                        rel="noopener noreferrer">github.com/sabamchedlishvili</a></li>
             </ul>
 
             <form action="#" method="post">
                 <fieldset>
                     <legend><strong>საკონტაქტო ფორმა</strong></legend>
-                    
+
                     <p>
                         <label for="full-name">თქვენი სახელი: <abbr title="სავალდებულო">*</abbr></label><br>
                         <input type="text" id="full-name" name="name" placeholder="მაგ: გიორგი" required>
@@ -1465,7 +1497,8 @@
 
                     <p>
                         <label for="message">შეტყობინება: <abbr title="სავალდებულო">*</abbr></label><br>
-                        <textarea id="message" name="message" rows="5" cols="40" placeholder="დაწერეთ თქვენი შეტყობინება..." required></textarea>
+                        <textarea id="message" name="message" rows="5" cols="40"
+                            placeholder="დაწერეთ თქვენი შეტყობინება..." required></textarea>
                     </p>
 
                     <div class="form-actions">
@@ -1608,7 +1641,7 @@
 
                             try {
                                 history.replaceState(null, '', '#all');
-                            } catch (err) {}
+                            } catch (err) { }
                         } else {
                             var selectedSection = document.getElementById(target);
                             if (selectedSection) {
@@ -1641,7 +1674,7 @@
 
                                 try {
                                     history.replaceState(null, '', '#' + target);
-                                } catch (err) {}
+                                } catch (err) { }
                             }
                         }
 
@@ -1751,29 +1784,29 @@
                         }
 
                         users.forEach(function (user) {
-                            var initials = user.name ? user.name.split(' ').map(function(n){ return n[0]; }).slice(0, 2).join('') : 'U';
+                            var initials = user.name ? user.name.split(' ').map(function (n) { return n[0]; }).slice(0, 2).join('') : 'U';
                             var companyName = (user.company && user.company.name) ? user.company.name : 'დამოუკიდებელი';
                             var city = (user.address && user.address.city) ? user.address.city : '';
 
                             var card = document.createElement('div');
                             card.className = 'employee-card';
                             card.setAttribute('data-id', user.id);
-                            card.innerHTML = 
+                            card.innerHTML =
                                 '<div class="employee-header">' +
-                                    '<div class="employee-avatar">' + initials + '</div>' +
-                                    '<div class="employee-title">' +
-                                        '<h3>' + escapeHtml(user.name) + '</h3>' +
-                                        '<span class="employee-username">@' + escapeHtml(user.username || 'user') + '</span>' +
-                                    '</div>' +
+                                '<div class="employee-avatar">' + initials + '</div>' +
+                                '<div class="employee-title">' +
+                                '<h3>' + escapeHtml(user.name) + '</h3>' +
+                                '<span class="employee-username">@' + escapeHtml(user.username || 'user') + '</span>' +
+                                '</div>' +
                                 '</div>' +
                                 '<ul class="employee-details">' +
-                                    '<li><strong>კომპანია:</strong> <span class="employee-badge">' + escapeHtml(companyName) + '</span></li>' +
-                                    '<li><strong>ელ-ფოსტა:</strong> <a href="mailto:' + escapeHtml(user.email) + '">' + escapeHtml(user.email) + '</a></li>' +
-                                    (user.phone ? '<li><strong>ტელ:</strong> ' + escapeHtml(user.phone) + '</li>' : '') +
-                                    (city ? '<li><strong>ქალაქი:</strong> ' + escapeHtml(city) + '</li>' : '') +
+                                '<li><strong>კომპანია:</strong> <span class="employee-badge">' + escapeHtml(companyName) + '</span></li>' +
+                                '<li><strong>ელ-ფოსტა:</strong> <a href="mailto:' + escapeHtml(user.email) + '">' + escapeHtml(user.email) + '</a></li>' +
+                                (user.phone ? '<li><strong>ტელ:</strong> ' + escapeHtml(user.phone) + '</li>' : '') +
+                                (city ? '<li><strong>ქალაქი:</strong> ' + escapeHtml(city) + '</li>' : '') +
                                 '</ul>' +
                                 '<div class="employee-actions">' +
-                                    '<button type="button" class="btn-delete-emp" data-id="' + user.id + '" title="თანამშრომლის წაშლა (HTTP DELETE)">წაშლა (DELETE)</button>' +
+                                '<button type="button" class="btn-delete-emp" data-id="' + user.id + '" title="თანამშრომლის წაშლა (HTTP DELETE)">წაშლა (DELETE)</button>' +
                                 '</div>';
 
                             grid.appendChild(card);
@@ -1794,14 +1827,14 @@
                         fetch('https://jsonplaceholder.typicode.com/users/' + id, {
                             method: 'DELETE'
                         })
-                        .then(function () {
-                            employeesList = employeesList.filter(function (u) { return String(u.id) !== String(id); });
-                            renderEmployees(employeesList);
-                            showEmployeeAlert('თანამშრომელი წაიშალა (HTTP DELETE მოთხოვნა გაიგზავნა წარმატებით)!', 'info');
-                        })
-                        .catch(function () {
-                            showEmployeeAlert('წაშლისას დაფიქსირდა შეცდომა.', 'error');
-                        });
+                            .then(function () {
+                                employeesList = employeesList.filter(function (u) { return String(u.id) !== String(id); });
+                                renderEmployees(employeesList);
+                                showEmployeeAlert('თანამშრომელი წაიშალა (HTTP DELETE მოთხოვნა გაიგზავნა წარმატებით)!', 'info');
+                            })
+                            .catch(function () {
+                                showEmployeeAlert('წაშლისას დაფიქსირდა შეცდომა.', 'error');
+                            });
                     }
 
                     // HTTP POST მეთოდი
@@ -1850,25 +1883,25 @@
                                     'Content-type': 'application/json; charset=UTF-8',
                                 },
                             })
-                            .then(function (response) {
-                                return response.json();
-                            })
-                            .then(function (createdUser) {
-                                createdUser.id = createdUser.id || Date.now();
-                                employeesList.unshift(createdUser);
-                                renderEmployees(employeesList);
+                                .then(function (response) {
+                                    return response.json();
+                                })
+                                .then(function (createdUser) {
+                                    createdUser.id = createdUser.id || Date.now();
+                                    employeesList.unshift(createdUser);
+                                    renderEmployees(employeesList);
 
-                                addForm.reset();
-                                addForm.style.display = 'none';
-                                if (toggleAddBtn) toggleAddBtn.textContent = '+ თანამშრომლის დამატება (POST)';
-                                showEmployeeAlert('ახალი თანამშრომელი დაემატა (HTTP POST მოთხოვნით)!', 'success');
-                            })
-                            .catch(function () {
-                                showEmployeeAlert('დამატებისას დაფიქსირდა შეცდომა.', 'error');
-                            })
-                            .finally(function () {
-                                if (submitBtn) submitBtn.disabled = false;
-                            });
+                                    addForm.reset();
+                                    addForm.style.display = 'none';
+                                    if (toggleAddBtn) toggleAddBtn.textContent = '+ თანამშრომლის დამატება (POST)';
+                                    showEmployeeAlert('ახალი თანამშრომელი დაემატა (HTTP POST მოთხოვნით)!', 'success');
+                                })
+                                .catch(function () {
+                                    showEmployeeAlert('დამატებისას დაფიქსირდა შეცდომა.', 'error');
+                                })
+                                .finally(function () {
+                                    if (submitBtn) submitBtn.disabled = false;
+                                });
                         });
                     }
 
@@ -1912,4 +1945,5 @@
         })();
     </script>
 </body>
+
 </html>
