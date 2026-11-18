@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ჩვენი გუნდი და მომხმარებლების სია - საბა მჭედლიშვილის პორტფოლიო">
+    <title>გუნდი / მომხმარებლები | საბა მჭედლიშვილი</title>
+    <!-- დაკავშირებული CSS სტილები და JavaScript ფაილი -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- საიტის მთავარი ჰედერი და ნავიგაცია -->
+    <header id="header">
+        <div class="header-top">
+            <div class="header-titles">
+                <h1><a href="index.html" class="brand-link">საბა მჭედლიშვილი</a></h1>
+                <p class="subtitle"><strong>დამწყები ვებ-დეველოპერი (16 წლის) | Frontend ენთუზიასტი</strong></p>
+            </div>
+
+            <!-- ჰედერის მართვის ღილაკები: თემის გადამრთველი და ბურგერ მენიუ -->
+            <div class="header-controls">
+                <!-- Light / Dark თემის გადასართველი ღილაკი -->
+                <button id="theme-toggle" class="theme-toggle-btn" type="button"
+                    aria-label="თემის შეცვლა (Light / Dark)" title="თემის შეცვლა">
+                    <span class="theme-icon sun-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </span>
+                    <span class="theme-icon moon-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- ბურგერ მენიუს ღილაკი (მობილურის რეზოლუციაზე) -->
+                <button class="burger-btn" id="burger-btn" type="button" aria-label="ნავიგაციის მენიუს გახსნა"
+                    aria-expanded="false" aria-controls="main-nav">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- მთავარი ნავიგაცია -->
+        <nav id="main-nav" aria-label="მთავარი ნავიგაცია">
+            <ul>
+                <li><a href="index.html">ჩემ შესახებ</a></li>
+                <li><a href="skills.html">უნარები</a></li>
+                <li><a href="projects.html">პროექტები</a></li>
+                <li><a href="goals.html">სასწავლო მიზნები</a></li>
+                <li><a href="users.html" class="active" aria-current="page">მომხმარებლები (API)</a></li>
+                <li><a href="contact.html">კონტაქტი</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ძირითადი შიგთავსი: მომხმარებლები / API რესურსი და ძებნა -->
+    <main>
+        <section id="employees">
+            <h2>მომხმარებელთა სია (JSONPlaceholder API)</h2>
+            <p>
+                მონაცემები დინამიკურად იტვირთება <strong>JSONPlaceholder API</strong>-დან (<code>https://jsonplaceholder.typicode.com/users</code> - HTTP <code>GET</code>).
+                გვერდზე რეალიზებულია <strong>რეალურ დროში ძებნის ფუნქციონალი</strong> (სახელით, მეილით ან კომპანიით), ასევე ახალი მომხმარებლის დამატება (<code>POST</code>) და წაშლა (<code>DELETE</code>).
+            </p>
+
+            <!-- საძიებო ველი და დამატების ღილაკი -->
+            <div class="employees-controls">
+                <input type="text" id="employee-search"
+                    placeholder="მოძებნეთ მომხმარებელი სახელით, მეილით ან კომპანიით..." aria-label="მომხმარებლის ძებნა">
+                <button type="button" id="btn-toggle-add-form" class="btn-primary-action">+ მომხმარებლის დამატება (POST)</button>
+            </div>
+
+            <!-- ახალი მომხმარებლის დამატების ფორმა (HTTP POST) -->
+            <form id="add-employee-form" class="add-employee-card" style="display: none;">
+                <h3>ახალი მომხმარებლის დამატება (POST მეთოდი)</h3>
+                <p><small>ფორმა აგზავნის <code>POST</code> მოთხოვნას JSONPlaceholder-ზე და ამატებს მომხმარებელს სიის თავში:</small></p>
+
+                <div class="form-grid">
+                    <p>
+                        <label for="emp-name">სახელი და გვარი: *</label>
+                        <input type="text" id="emp-name" placeholder="მაგ: გიორგი ბერიძე" required>
+                    </p>
+                    <p>
+                        <label for="emp-email">ელ-ფოსტა: *</label>
+                        <input type="email" id="emp-email" placeholder="giorgi@example.com" required>
+                    </p>
+                    <p>
+                        <label for="emp-company">კომპანია / პოზიცია:</label>
+                        <input type="text" id="emp-company" placeholder="მაგ: Romaguera">
+                    </p>
+                    <p>
+                        <label for="emp-city">ქალაქი:</label>
+                        <input type="text" id="emp-city" placeholder="მაგ: თბილისი">
+                    </p>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="emp-submit-btn">დამატება (გაგზავნე POST)</button>
+                    <button type="button" id="btn-cancel-add" class="btn-cancel">გაუქმება</button>
+                </div>
+            </form>
+
+            <!-- სტატუსის / შეტყობინების ველი -->
+            <div id="employees-alert" class="employees-alert" style="display: none;" role="status"></div>
+
+            <!-- ლოუდერი მონაცემების ჩატვირთვისას -->
+            <div id="employees-loading" class="employees-loading">
+                <div class="spinner"></div>
+                <p>მომხმარებლების სია იტვირთება სერვერიდან...</p>
+            </div>
+
+            <!-- მომხმარებელთა ბარათების ბადე -->
+            <div id="employees-grid" class="employees-grid"></div>
+        </section>
+    </main>
+
+    <!-- საიტის ფუტერი -->
+    <footer id="footer">
+        <p>&copy; 2026 საბა მჭედლიშვილი. ყველა უფლება დაცულია.</p>
+        <p><small>პორტფოლიო შექმნილია სასწავლო მიზნებისთვის (HTML5, CSS3, Vanilla JS).</small></p>
+        <p><a href="#header">↑ გვერდის დასაწყისში დაბრუნება</a></p>
+    </footer>
+
+</body>
+
+</html>
